@@ -19,6 +19,7 @@ int main()
 
     while (i == 1)
     {
+		system("cls");
 		printf("\n#############################################");
 		printf("\n           MENU - Lista de informacao      ");
 		printf("\n");
@@ -40,8 +41,8 @@ int main()
 		switch (opcao) {
 
 			case 1:
-				cout << "Possui : " << tamanho_lista(li) << " alunos cadastrados" << endl;
-				tamanho_lista(li);
+				cout << "Lista tem :"<< tamanho_lista(li)<<endl;
+				//tamanho_lista(li);
 				system("pause");
 				break;
 

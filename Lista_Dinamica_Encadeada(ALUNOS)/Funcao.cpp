@@ -44,12 +44,22 @@ int tamanho_lista(Lista* li) {
     int cont = 0;
     Elem* no = *li;
 
+    while (no != NULL) {
+        cont++;
+        no = no->prox;
+    }
+
+
+    /*
     while (li != NULL)
     {
         cont++;
         no = no->prox;
+        cout << no->prox;
     }
+    */
     return cont;
+    cout <<" "<< cont;
 }
 
 int lista_vazia(Lista* li) {

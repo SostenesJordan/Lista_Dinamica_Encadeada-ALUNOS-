@@ -30,9 +30,10 @@ int main()
 		printf("\n-->  [3] = Remover aluno\n ");
 		printf("\n-->  [4] = Buscar\n  ");
 		printf("\n-->  [5] = Imprimir lista de alunos\n ");
-		printf("\n-->  [6] = calcular a media de todos os alunos\n ");
+		printf("\n-->  [6] = Calcular a media de todos os alunos\n ");
+		printf("\n				[0] = PARA SAIR\n ");
 		printf("\n");
-		printf("\nQualquer outra tecla  vai sair\n ");
+		printf("\n\n ");
 		printf("\n");
 		printf("\n#############################################");
 		printf("\n\n\n>> "); cin >> opcao;
@@ -40,8 +41,15 @@ int main()
 
 		switch (opcao) {
 
+			case 0:
+				cout << "Saindo..." << endl;
+				i == 0;
+				break;
+
+
+
 			case 1:
-				cout << "Lista tem :"<< tamanho_lista(li)<<endl;
+				cout << "Lista tem :"<< tamanho_lista(li)<<" alunos cadastrados"<<endl;
 				//tamanho_lista(li);
 				system("pause");
 				break;
@@ -105,7 +113,7 @@ int main()
 				}
 
 				mediaclasse = somaclasse / (aux * 2);
-				cout << "\n A media da classe  foi : " << mediaclasse;
+				cout << "\n A media da classe  foi : " << mediaclasse<<endl;
 				system("pause");
 		}
     }

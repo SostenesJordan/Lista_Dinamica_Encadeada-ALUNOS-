@@ -43,7 +43,7 @@ int main()
 
 			case 0:
 				cout << "Saindo..." << endl;
-				i == 0;
+				i = 0;
 				break;
 
 

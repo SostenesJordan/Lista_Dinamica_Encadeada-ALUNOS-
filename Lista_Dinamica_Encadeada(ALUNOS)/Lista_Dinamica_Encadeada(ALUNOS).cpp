@@ -20,22 +20,20 @@ int main()
     while (i == 1)
     {
 		system("cls");
-		printf("\n#############################################");
 		printf("\n           MENU - Lista de informacao      ");
+		printf("\n------------------------------------------------");
 		printf("\n");
 		printf("\n");
-		printf("\n");
-		printf("\n-->  [1] = Total de matriculados\n   ");
-		printf("\n-->  [2] = Adicionar novo aluno\n ");
-		printf("\n-->  [3] = Remover aluno\n ");
-		printf("\n-->  [4] = Buscar\n  ");
-		printf("\n-->  [5] = Imprimir lista de alunos\n ");
-		printf("\n-->  [6] = Calcular a media de todos os alunos\n ");
-		printf("\n				[0] = PARA SAIR\n ");
-		printf("\n");
+		printf("\n  [1] - Total de matriculados\n   ");
+		printf("\n  [2] - Adicionar novo aluno\n ");
+		printf("\n  [3] - Remover aluno\n ");
+		printf("\n  [4] - Buscar\n  ");
+		printf("\n  [5] - Imprimir lista de alunos\n ");
+		printf("\n  [6] - Calcular a media de todos os alunos\n ");
+		printf("\n	[0] = PARA SAIR\n ");
+		printf("\n------------------------------------------------");
 		printf("\n\n ");
 		printf("\n");
-		printf("\n#############################################");
 		printf("\n\n\n>> "); cin >> opcao;
 
 

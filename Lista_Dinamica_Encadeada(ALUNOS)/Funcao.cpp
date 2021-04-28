@@ -67,14 +67,7 @@ int tamanho_lista(Lista* li) {
     }
 
 
-    /*
-    while (li != NULL)
-    {
-        cont++;
-        no = no->prox;
-        cout << no->prox;
-    }
-    */
+
     return cont;
     cout <<" "<< cont;
 }
@@ -241,22 +234,30 @@ int consulta_lista_mat(Lista* li, int mat, struct aluno* al) {
 
         if (al->n1 == 0 && al->n2 == 0) {
             int opcao;
-            cout << "Aluno cursando..." << endl<<endl;
+            cout << "Aluno está cursando no momento" << endl<<endl;
 
-            cout << "Deseja adicionar as notas do aluno ?" << endl << "Digite [1] para SIM || Digite [2] para NAO >> "; cin >> opcao;
+            cout << "Deseja inserir as notas do aluno? " << endl << "[1] >> SIM || [2] >> NAO -> "; cin >> opcao;
             if (opcao == 1) {
-                cout << "Digite a nota 1 : "; cin >> al->n1;
-                cout << "Digite a nota 2 : "; cin >> al->n2;
+                cout << "Insira a N1 : "; cin >> al->n1;
+                cout << "Insira a N2 : "; cin >> al->n2;
+
+                if (al->n1 * 0.4 + al->n2 * 0.6 >= 6) {
+                    cout << "Aluno aprovado!" << endl;
+                    return 1;
+                }
+                else
+                {
+                    cout << "Aluno reprovado!" << endl;
+                    return 1;
+                }
+
+
             }
-            if (al->n1 * 0.4 + al->n2 * 0.6 >= 6) {
-                cout << "Aluno aprovado!" << endl;
-                return 1;
-            }
-            if (al->n1 * 0.4 + al->n2 * 0.6 <= 6)
+            if (opcao != 1)
             {
-                cout << "Aluno reprovado!" << endl;
                 return 1;
             }
+
         }
 
     }

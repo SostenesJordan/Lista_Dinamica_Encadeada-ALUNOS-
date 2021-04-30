@@ -156,6 +156,8 @@ void imprime_lista(Lista* li) {
     {
         cout <<"Matricula - "<< no->dados.matricula<<endl;
         cout << "Nome - " << no->dados.nome<<endl;
+        cout << "Nota 1 - " << no->dados.n1 << endl;
+        cout << "Nota 2 - " << no->dados.n2 << endl;
         cout << "---------"<<endl;
         no = no->prox;
     }
@@ -229,17 +231,22 @@ int consulta_lista_mat(Lista* li, int mat, struct aluno* al) {
     {
         *al = no->dados;
         
-        cout << "Matricula - " << al->matricula << endl;
-        cout << "Nome - " << al->nome << endl;
+        cout << "Matricula - " << no->dados.matricula << endl;
+        cout << "Nome - " << no->dados.nome << endl;
+        al->n1 == 0; al->n2 == 0;
 
         if (al->n1 == 0 && al->n2 == 0) {
-            int opcao;
+            
+
+
             cout << "Aluno está cursando no momento" << endl<<endl;
 
+            int opcao;
             cout << "Deseja inserir as notas do aluno? " << endl << "[1] >> SIM || [2] >> NAO -> "; cin >> opcao;
+
             if (opcao == 1) {
-                cout << "Insira a N1 : "; cin >> al->n1;
-                cout << "Insira a N2 : "; cin >> al->n2;
+                cout << "Insira a N1 : "; cin >> no->dados.n1;
+                cout << "Insira a N2 : "; cin >> no->dados.n2;
 
                 if (al->n1 * 0.4 + al->n2 * 0.6 >= 6) {
                     cout << "Aluno aprovado!" << endl;
@@ -252,11 +259,22 @@ int consulta_lista_mat(Lista* li, int mat, struct aluno* al) {
                 }
 
 
+                if (opcao != 1)
+                {
+                    return 1;
+                }
             }
-            if (opcao != 1)
-            {
-                return 1;
-            }
+        }
+        else{
+
+                cout << "Matricula - " << no->dados.matricula << endl;
+                cout << "Nome - " << no->dados.nome << endl;
+                cout << "Nota - " << no->dados.n1 << endl;
+                cout << "Nota - " << no->dados.n2 << endl;
+
+
+
+
 
         }
 
